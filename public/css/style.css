@@ -1,0 +1,589 @@
+
+ /* main css ; */
+
+ *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: "Open Sans", sans-serif;
+    background: #F4EBD0 
+  }
+  
+  section{
+    background: #F4EBD0 ;
+    background-size: cover;
+    height: calc(100vh - 100px)
+  }
+  
+   /* box/containers css */
+  
+  .row{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .row1{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .column{
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .column1{
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .container1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .container .card {
+    background: #c09647;
+    width: 400px;
+    height: 250px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+  
+  .container .card2 {
+    background: #c09647;
+    width: 400px;
+    height: 330px;
+    margin-top: 30px;
+    margin-bottom:25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+
+  .container .card3 {
+    background: #c09647;
+    width: 400px;
+    height: 220px;
+    margin-top: 30px;
+    margin-bottom:25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+
+  .container .card4 {
+    background: #c09647;
+    width: 400px;
+    height: 500px;
+    margin-top: 30px;
+    margin-bottom:25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+
+  .container .card5 {
+    background: #c09647;
+    width: 400px;
+    height: 360px;
+    margin-top: 30px;
+    margin-bottom:25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+
+  .container .card6 {
+    background: #c09647;
+    width: 400px;
+    height: 565px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 980px) {
+    .row .column {
+      margin-bottom: 5px;
+      flex-basis: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 680px) {
+    .row .column {
+      flex-basis: 100%;
+      margin: 0 0 5px 0;
+    }
+  }
+  
+   /* Header Navigation*/
+  nav{
+    background: #122620;
+    height: 60px;
+    width: 100%;
+  }
+  
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0 70px;
+    font-weight: bold;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 40px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height:  60px;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 3px;
+    text-transform: uppercase;
+  }
+  
+  nav ul ul{
+    position: absolute;
+    top: 53px;
+    opacity: 0;
+    visibility: hidden;
+    background: #122620;
+  }
+  
+  nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+  }
+  
+  a.active, a:hover {
+    color: #D6AD60 ;
+    transition: .5s ;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 892px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #122620;
+      top: 60px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #D6AD60;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  
+  
+   /* footer navigation */
+  footer{
+    background: #122620;
+    position: fixed;
+    bottom:  0px;
+    width: 100%;
+  }
+  
+  .foot-content{
+    display: flex;
+  }
+  
+  .foot-content .box{
+    flex-basis: 100%;
+    padding: 5px 15px;
+  }
+  
+  .box p{
+    color: white;
+    font-size: 13px;
+    margin: 5px;
+  }
+  
+  .box .content{
+    margin: 10px 0 0 0;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  
+   /* buttons */
+  
+   .button {
+    border: none;
+    padding: 15px 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: #122620; 
+    color: white; 
+  }
+  
+  .button1:hover {
+    background-color: #D6AD60;
+    color: #122620;
+  }
+  
+  .button2 {
+    background-color: #122620; 
+    color: white; 
+  }
+  
+  .button2:hover {
+    transform: scale(1.08)
+  }
+  
+  .plusBtn {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    background: #122620;
+    border-radius: 50%;
+    right: 40px;
+    bottom: 75px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 55px;
+    color: #d3d3d3;
+    font-size: 22px;
+  }
+
+  .del-btn{
+    background-color: #122620;
+    border: transparent;
+    padding: 5px;
+    color: #FFFFFF;
+    width: 36%;
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+  .ed-btn{
+    background-color: #122620;
+    border: transparent;
+    padding: 8.5px;
+    color: #FFFFFF;
+    width: 35%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+
+  
+   /* input boxes*/
+   .inputbox{
+    width: 300px;
+    border: 1px solid white;
+    margin: 8px 0;
+    margin-bottom: 30px;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+   }
+
+   
+  
+   .inputbox:focus{
+    border-color: #122620;
+    box-shadow: 0 0 8px 0 #122620;
+    transition: 0.3s;
+   }
+  
+  
+  input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    content: none;
+    outline: none;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked {
+   appearance: none;
+   outline: none;
+   padding: 0;
+   content: none;
+   border: none;
+  }
+  
+  input[type="radio"]:checked::before{
+   color: white !important;
+   content: "\00A0\2713\00A0" !important;
+   font-weight: bolder;
+   border-radius: 50%;
+   border: 2px solid #122620;;
+   font-size: 14px;
+   background: #122620;
+  }
+  
+   /* texts  */
+  
+   .text1 {
+    color: #B68D40;
+    font-size: 45px;
+    font-weight: 800;
+   }
+  
+   .text2 {
+    color: #122620;
+    font-size: 20px;
+    font-style: italic;
+   }
+  
+   .text3 {
+    color: #122620;
+    font-size: 28px;
+    font-style: bold;
+    padding-bottom: 10px;
+   }
+  
+   .text4 {
+    color: #122620;
+    font-size: 18px;
+    font-style: italic;
+   }
+  
+   .text5 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+   }
+   
+   .text6 {
+    color: white;
+    font-size: 18px;
+   }
+  
+   .text7 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 21px;
+   }
+  
+   .text8 {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+   }
+  
+   .text9 {
+    color: #73757a;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 12px;
+   }
+  
+    /* popup styles */
+  
+    .popup-overlay{
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      user-select: none;
+      opacity: 0;
+    }
+    
+    .popup-box-container{
+      background-color: #FFFFFF;
+      width: 400px;
+      height: 45vh;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%);
+      -webkit-transform: translate(-50%);
+      -moz-transform: translate(-50%);
+      -o-transform: translate(-50%);
+      border-radius: 10px;
+      -webkit-border-radius:10px;
+      -moz-border-radius:10px;
+      -o-border-radius:10px;
+  
+    }
+  
+    .check-container{
+      font-size: 50px;
+      color: green;
+      height: 80px;
+      width: 80px;
+      border: 2px solid green;
+      text-align: center;
+      padding-top: 13px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin: 30px 0 0 160px;
+    }
+  
+    .x-container{
+      font-size: 50px;
+      color: red;
+      height: 80px;
+      width: 80px;
+      border: 2px solid red;
+      text-align: center;
+      padding-top: 10px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin: 30px 0 0 160px;
+    }
+
+    .trash-container{
+      font-size: 50px;
+      color: red;
+      height: 80px;
+      width: 80px;
+      border: 2px solid red;
+      text-align: center;
+      padding-top: 10px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin: 30px 0 0 160px;
+    }
+  
+    .ok-btn{
+      background-color: #122620;
+      border: transparent;
+      padding: 15px;
+      color: #FFFFFF;
+      margin-top: 30px;
+      width: 25%;
+      font-size: 90%;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+  @media only screen and (max-width:400px){
+    .popup-box-container{
+      width: 300px;
+    }
+  }
+  
+    .active{
+      opacity: 1;
+      z-index: 1;
+    }
+  
+  
+  
+  
